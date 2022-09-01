@@ -1,0 +1,57 @@
+/* Reset */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Vars */
+
+:root {
+    --primary-color: #1E2D3B;
+    --secondary-color: #2E3A46;
+    --grey: #80746A;
+}
+
+/* Generics */
+
+body{
+    color: #fff;
+}
+
+
+/* Header */
+
+header {
+    padding: 0 20px;
+    height: 70px;
+    background-color: var(--secondary-color);
+}
+
+header img {
+    height: 50px;
+}
+
+/* Main */
+
+main {
+    height: calc(100vh - 70px);
+    background-color: var(--primary-color);
+}
+
+/* Album card */
+
+.album {
+    height: 100%;
+    background-color: var(--secondary-color);
+}
+
+.album .author,
+.album .year {
+        color: var(--grey);
+}
+
+.album .author, .album .band {
+    font-size: 20px;
+}
