@@ -25,22 +25,19 @@
                     <img src="img/spotify-logo-png-7053.png" alt="Spotify Logo">
                 </a>
             </nav>
-            <form @submit.prevent="fetchDiscs">
-                <select v-model="genre">
-                    <option value="">Tutti i generi</option>
-                    <option value="Rock">Rock</option>
-                    <option value="Pop">Pop</option>
-                    <option value="Jazz">Jazz</option>
-                    <option value="Metal">Metal</option>
-                </select>
-                <button type="submit">Filtra</button>
-            </form>
+            <select @change.prevent="fetchDiscs" v-model="genre">
+                <option value="">Tutti i generi</option>
+                <option value="Rock">Rock</option>
+                <option value="Pop">Pop</option>
+                <option value="Jazz">Jazz</option>
+                <option value="Metal">Metal</option>
+            </select>
         </header>
         <!-- Main -->
         <main class="d-flex align-items-center">
             <div class="container">
                 <div class="row g-3">
-                    <div v-for="disc in discs" class="col-2">
+                    <div v-for="disc in discs" class="col-auto my_width">
                         <div class="album p-3 text-center">
                             <img :src="disc.poster" :alt="disc.title" class="img-fluid mb-3">
                             <h4>{{disc.title}}</h4>

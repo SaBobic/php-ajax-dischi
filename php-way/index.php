@@ -35,7 +35,7 @@ include 'includes/discs.php';
         <div class="container">
             <div class="row g-3">
                 <?php foreach($discs as $disc) : ?>
-                    <div class="col-2">
+                    <div class="col-auto my_width">
                         <div class="album p-3 text-center">
                             <img <?= "src='{$disc['poster']}' alt='{$disc['title']}'" ?> class="img-fluid mb-3">
                             <h4><?= $disc['title'] ?></h4>

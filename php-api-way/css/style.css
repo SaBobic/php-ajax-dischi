@@ -40,6 +40,10 @@ main {
     background-color: var(--primary-color);
 }
 
+main .row .col-auto.my_width {
+    flex-basis: 20%;
+}
+
 /* Album card */
 
 .album {
