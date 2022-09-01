@@ -1,5 +1,4 @@
 <?php
-
 $discs = [
     [
         'title' => 'New Jersey',
@@ -45,6 +44,19 @@ $discs = [
     ]
 ];
 
-header('Content-Type: application/json');
+$result = [];
 
-echo json_encode($discs);
+$genre = $_GET['genre'] ?? '';
+
+if (!empty($genre)) {
+    foreach ($discs as $disc) {
+        if ($disc['genre'] === $genre) {
+            $result[] = $disc;
+        }
+    }
+} else {
+    $result = $discs;
+}
+
+header('Content-Type: application/json');
+echo json_encode($result);

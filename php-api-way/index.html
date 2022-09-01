@@ -25,13 +25,16 @@
                     <img src="img/spotify-logo-png-7053.png" alt="Spotify Logo">
                 </a>
             </nav>
-            <div>
-                <select name="" id="">
-                    <option value="">AAAAA</option>
-                    <option value="">AAAAA</option>
-                    <option value="">AAAAA</option>
+            <form @submit.prevent="fetchDiscs">
+                <select v-model="genre">
+                    <option value="">Tutti i generi</option>
+                    <option value="Rock">Rock</option>
+                    <option value="Pop">Pop</option>
+                    <option value="Jazz">Jazz</option>
+                    <option value="Metal">Metal</option>
                 </select>
-            </div>
+                <button type="submit">Filtra</button>
+            </form>
         </header>
         <!-- Main -->
         <main class="d-flex align-items-center">

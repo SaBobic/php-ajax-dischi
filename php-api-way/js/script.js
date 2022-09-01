@@ -5,10 +5,11 @@ const app = new Vue({
     name: 'App',
     data: {
         discs: [],
+        genre: '',
     },
     methods: {
         fetchDiscs() {
-            axios.get('http://localhost/php-ajax-dischi/api/discs/').then(res => {
+            axios.get(`http://localhost/php-ajax-dischi/api/discs?genre=${this.genre}`).then(res => {
                 this.discs = res.data;
             })
         },
