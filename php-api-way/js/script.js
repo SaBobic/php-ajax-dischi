@@ -9,7 +9,7 @@ const app = new Vue({
     },
     methods: {
         fetchDiscs() {
-            axios.get(`http://localhost/php-ajax-dischi/api/discs?genre=${this.genre}`).then(res => {
+            axios.get(`../api/discs?genre=${this.genre}`).then(res => {
                 this.discs = res.data;
             })
         },
